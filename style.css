@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto+Serif:wght@800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+.left {
+    background-color: #127681;
+    height: 900px;
+    width: 50%;
+    float: left;
+}
+
+.right {
+    background-color: white;
+    height: 900px;
+    width: 50%;
+    float: right;
+}
+
+.title h1 {
+    font-family: 'poppins', sans-serif;
+    color: #071f36;
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+}
+
+.exclamation {
+    color: #F3C623;
+}
+
+.prize {
+    width: 600px;
+    background-color: white;
+    height: 85px;
+    margin: auto;
+    text-align: center; 
+}
+
+.prize h2 {
+    font-family: 'Roboto Serif', sans-serif;
+    color: #095861;
+    padding-top: 20px;
+    padding-bottom: 5px;   
+}
+
+.prize h3 {
+    font-family: 'poppins', sans-serif;
+    color: #071f36; 
+}
+
+.about {
+    width: 600px;
+    height : 90px;
+    margin: auto; 
+    padding-top: 30px;
+    text-align: center;
+}
+
+.about p {
+    font-family: 'poppins', sans-serif;
+    color: #071f36;
+    font-size: 23px;
+}
+
+.abouttext {
+    font-size: 17px;
+}
+
+.prize-table{
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+table{
+    font-family: 'Roboto';
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+
+.right-content {
+    font-family: 'Roboto';
+    padding: 40px;
+}
+
+.right-content div {
+    padding: 20px;
+}
+
+.right-content h1{
+    padding-bottom: 15px;
+}
+
+.right-content div:nth-child(even) {
+    background-color: #dddddd;
+}

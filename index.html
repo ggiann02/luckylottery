@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lucky For Life Lottery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+<body>
+    <div class ="wrapper">
+        <div class="left"> 
+            <div class="title">
+                <h1>Lucky For Life <span class="exclamation">!</span></h1>
+            </div>
+            <div class = "prize">
+                <h2>Maximum prize : $1000 a day!</h2>
+                <h3>($7,000 a Week)</h3>
+            </div>
+            <div class ="about">
+                <p>You have the chance of winning up to $1,000 a day! <br> <span class="abouttext">Just click the "pick" button on the right and we will give you randomly generated numbers - four normal numbers and one "lucky ball". <br> Check the table below for all the possible wins!</span></p>
+            </div>
+            <div class ="prize-table">
+                <table>
+                <tr>
+                    <th>Match</th>
+                    <th>Prize</th>
+                </tr>
+                <tr>
+                    <td>5 + Lucky Ball</td>
+                    <td>$7,000 a WEEK for LIFE</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>$25,000 a YEAR for LIFE</td>
+                </tr>
+                <tr>
+                    <td>4 + Lucky Ball</td>
+                    <td>$5,000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>$200</td>
+                </tr>
+                <tr>
+                    <td>3 + Lucky Ball</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>2 + Lucky Ball</td>
+                    <td>$25</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>$3</td>
+                </tr>
+                <tr>
+                    <td>1 + Lucky Ball</td>
+                    <td>$6</td>
+                </tr>
+                <tr>
+                    <td>0 + Lucky Ball</td>
+                    <td>$4</td>
+                </tr>
+                </table>
+                
+            </div>
+        </div>
+        <div class="right">
+            
+            <script>
+                const my_pick = [12, 15, 24, 35, 48];
+                const my_lucky = 3;
+                var num_array = [,,,];
+                for (let i = 0; i < 4; i++) {
+                    num_array[i] = Math.floor(Math.random() * 48) + 1;
+                    
+                }
+                
+                var num1, num2, num3, num4;
+                
+                num1 = num_array[0];
+                num2 = num_array[1];
+                num3 = num_array[2];
+                num4 = num_array[3];
+                
+                num_array.sort(function(a,b){return a-b});
+                
+            
+                var lucky;
+                lucky = Math.floor(Math.random() * 18) + 1;
+                
+                var found;
+                found = 0;
+                var lucky_found;
+                lucky_found = 0;
+                
+                for (let i = 0; i < 4; i++) {
+                    if (num_array[i] == my_pick[i]) {
+                        found++;
+                    }
+                }
+                
+                if (my_lucky == lucky) {
+                    lucky_found = 1;
+                }
+                
+                var prize_money = 0;
+                
+                if (lucky_found == 1) {
+                    if (found == 5){
+                        prize_money = 365000;
+                    } else if (found == 4) {
+                        prize_money = 5000;
+                    } else if (found == 3) {
+                        prize_money = 150;
+                    } else if (found == 2) {
+                        prize_money = 25;
+                    } else if (found == 1){
+                        prize_money = 6;
+                    } else if (found == 0) {
+                        prize_money = 4;
+                    }
+                } else if (lucky_found == 0) {
+                    if (found == 5) {
+                        prize_money =25000
+                    } else if (found == 4){
+                        prize_money = 200
+                    } else if (found == 3) {
+                        prize_money = 20;
+                    } else if (found == 2) {
+                        prize_money = 3;
+                    }
+                } 
+                
+                var snum1, snum2, snum3, snum4;
+                
+                snum1 = num_array[0];
+                snum2 = num_array[1];
+                snum3 = num_array[2];
+                snum4 = num_array[3];
+                
+                
+                
+                
+                
+                
+            </script>
+            <div class="right-content">
+            <div id="beforesort">
+                <h1 class="beforesort">Your pick before sorting: </h1>
+                <span id="number1"></span>
+                <span id="number2"></span>
+                <span id="number3"></span>
+                <span id="number4"></span>
+                <span id="luckynumber"></span>
+                <script>
+                let number1 = num1;
+                document.getElementById("number1").innerHTML = number1;
+                let number2 = num2;
+                document.getElementById("number2").innerHTML = number2;
+                let number3 = num3;
+                document.getElementById("number3").innerHTML = number3;
+                let number4 = num4;
+                document.getElementById("number4").innerHTML = number4;
+                let luckynumber = lucky;
+                document.getElementById("luckynumber").innerHTML = luckynumber;
+                </script>
+            
+            </div>
+            <div id="aftersort">
+                <h1 class="aftersort">Your pick after sorting: </h1>
+                <span id="snumber1"></span>
+                <span id="snumber2"></span>
+                <span id="snumber3"></span>
+                <span id="snumber4"></span>
+                <span id="sluckynumber"></span>
+                <script>
+                let snumber1 = snum1;
+                document.getElementById("snumber1").innerHTML = snumber1;
+                let snumber2 = snum2;
+                document.getElementById("snumber2").innerHTML = snumber2;
+                let snumber3 = snum3;
+                document.getElementById("snumber3").innerHTML = snumber3;
+                let snumber4 = snum4;
+                document.getElementById("snumber4").innerHTML = snumber4;
+                let sluckynumber = lucky;
+                document.getElementById("sluckynumber").innerHTML = sluckynumber;
+                </script>
+            
+            </div>
+            <div class="winning-numbers">
+                <h1>Winning numbers</h1>
+                <p>12, 15, 24, 35, 48 <span class="luckynumber">3</span></p>
+            </div>
+            
+            <div class="match-num">
+                <h1>How many numbers matched: </h1>
+                <span id="matchnum"></span>
+                <script>
+                let matchnum = found;
+                document.getElementById("matchnum").innerHTML = matchnum;
+                </script>
+            </div>
+            <div class="lucky-match">
+                <h1>Was the lucky ball matched?</h1>
+                <span id="luckyfound"></span>
+                <script>
+                    if (lucky_found == 0) {
+                        document.getElementById("luckyfound").innerHTML = "No";
+                    } else if (lucky_found == 1) {
+                        document.getElementById("luckyfound").innerHTML = "Yes";
+                    }
+                    
+                </script>
+            
+            </div>
+            <div class="prizemoney">
+                <h1>Your prize money: </h1>
+                <p>$<span id="prizemoney"></span></p>
+                <script>
+                let prizemoney = prize_money;
+                document.getElementById("prizemoney").innerHTML = prizemoney;
+                </script>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    
+</body>
+
+
+</html>
